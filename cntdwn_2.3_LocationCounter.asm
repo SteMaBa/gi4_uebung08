@@ -7,7 +7,7 @@ SECTION .text                                                   ;               
 	                                                        ;                                 0014
 	                                      
                                                                 ;Länge:                         Location Counter (hexadezimal):
-main:                                                                                            0000
+main:                                                           ;                                 0000
 	push ebp                                                ; 2 Byte                         0000
 	mov ebp, esp                                            ; 3 Byte                         0002       
 	sub esp, 4                                              ; 6 Bytes                        0005
