@@ -1,0 +1,35 @@
+Übung 8 Freitextfragen:
+
+1. Das Programm cntdwn.asm vergleicht in einer Schleife die Zahl in ebx mit der Zahl 30 auf dem Stack.
+   So lange ebx ungleich 30 ist, wird mit einem printf-Aufruf "Hello World! ebx = ?", wobei "?" durch bl, also die letzte Ziffer von ebx, ersetzt wird, ausgegeben.
+   ebx wird zunächst auf 39 gesetzt, die Ausgabe läuft also mit Werten von ebx = 39 bis ebx = 31.
+   Letztlich ergibt sich die Ausgabe mit den letzten Ziffern in bl:
+   "Hello World! ebx = 9" 
+   ...
+   "Hello World! ebx = 1"
+   
+   
+   
+2. Symboltabelle:
+
+        In chronologischer Reihenfolge:        
+        
+        Symbol          Typ             Wert (hexadez.) Global sichtbar?                Weitere Attribute
+        .text           Segment         0000            Nein                            .text
+        main            near            0000            Ja                              .text
+        schleife        near            001D            Nein                            .text
+        ende            near            003C            Nein                            .text
+        .data           Segment         0000            Nein                            .data
+        CR              equ             000D            Nein                            .data
+        LF              equ             000A            Nein                            .data
+        msg             DB              *               Ja                              .data
+        msg_len         DB              0020            Nein                            .data
+        
+        *: 48 65 6c 6c 6f 20 57 6f 72 6c 64 21 20 65 62 78 20 3d 20 3f 30 
+        
+        
+        Länge des Codesegments (in Bytes):
+        0014h + 0063h + 1h = 78h = 120 dezimal
+        
+        Länge des Datensegments (in Bytes):
+        0024h = 36 dezimal
