@@ -15,7 +15,7 @@ main:                                                                           
 	mov ebx, 0x39                                           ; 6 Bytes                        000B 
 	mov dword [ebp-4], 0x30                                 ; 11 Bytes                       0011
 
-schleife:                                                                                        001D
+schleife:                                                       ;                                001D
 	cmp ebx, dword [ebp-4]                                  ; 7 Bytes                        001D
 	je ende                                                 ; 2 bytes                        0024
 
@@ -28,7 +28,7 @@ schleife:                                                                       
 	dec ebx                                                 ; 2 Bytes                        0038
 	jmp schleife                                            ; 2 Bytes                        003A
 
-ende:                                                                                            003C
+ende:                                                           ;                                003C
 	add esp, 4                                              ; 6 Bytes                        003C
 	pop ebp                                                 ; 2 Bytes                        0042       
 
@@ -39,7 +39,7 @@ ende:                                                                           
 	mov eax, 1                                              ; 6 Bytes                        0052
 	mov ebx, 0                                              ; 6 Bytes                        0058
 	int 0x80                                                ; 5 Bytes                        005E       
-                                                                                                 0063
+                                                                ;                                0063
                                                                                                  
                                                                 ;                                Location Counter (hexadezimal):        
 SECTION .data                                                   ;                                 0000       
